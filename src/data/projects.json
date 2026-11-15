@@ -1,0 +1,602 @@
+{
+  "Photography": [
+    {
+      "id": "photography-birulia-zamindar-bari",
+      "title": "Birulia Zamindar Bari",
+      "description": "",
+      "date": "2022-11-30",
+      "coverImage": {
+        "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130131024_IMG_3160.jpg",
+        "alt": "Birulia Zamindar Bari — 20221130131024_IMG_3160"
+      },
+      "images": [
+        {
+          "id": "photography-birulia-zamindar-bari-20221130131024-img-3160-jpg",
+          "title": "20221130131024_IMG_3160",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130131024_IMG_3160.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130131024_IMG_3160",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130132714-img-3246-jpg",
+          "title": "20221130132714_IMG_3246",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130132714_IMG_3246.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130132714_IMG_3246",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130133045-img-3272-jpg",
+          "title": "20221130133045_IMG_3272",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130133045_IMG_3272.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130133045_IMG_3272",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130133835-img-3295-jpg",
+          "title": "20221130133835_IMG_3295",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130133835_IMG_3295.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130133835_IMG_3295",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130135337-mg-6359-1-1-jpg",
+          "title": "20221130135337__MG_6359 (1) (1)",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130135337__MG_6359%20%281%29%20%281%29.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130135337__MG_6359 (1) (1)",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130140947-img-3523-jpg",
+          "title": "20221130140947_IMG_3523",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130140947_IMG_3523.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130140947_IMG_3523",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130141237-mg-6389-1-jpg",
+          "title": "20221130141237__MG_6389 (1)",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130141237__MG_6389%20%281%29.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130141237__MG_6389 (1)",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130142119-mg-6428-jpg",
+          "title": "20221130142119__MG_6428",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130142119__MG_6428.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130142119__MG_6428",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130142136-img-3553-1-jpg",
+          "title": "20221130142136_IMG_3553 (1)",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130142136_IMG_3553%20%281%29.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130142136_IMG_3553 (1)",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130142730-img-3571-1-jpg",
+          "title": "20221130142730_IMG_3571 (1)",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130142730_IMG_3571%20%281%29.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130142730_IMG_3571 (1)",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130142906-img-3573-jpg",
+          "title": "20221130142906_IMG_3573",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130142906_IMG_3573.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130142906_IMG_3573",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130143058-img-3574-jpg",
+          "title": "20221130143058_IMG_3574",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130143058_IMG_3574.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130143058_IMG_3574",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130143447-img-3580-jpg",
+          "title": "20221130143447_IMG_3580",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130143447_IMG_3580.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130143447_IMG_3580",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130143551-img-3585-1-jpg",
+          "title": "20221130143551_IMG_3585 (1)",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130143551_IMG_3585%20%281%29.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130143551_IMG_3585 (1)",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130143717-img-3589-jpg",
+          "title": "20221130143717_IMG_3589",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130143717_IMG_3589.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130143717_IMG_3589",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130143913-img-3595-jpg",
+          "title": "20221130143913_IMG_3595",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130143913_IMG_3595.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130143913_IMG_3595",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130144007-mg-6476-1-jpg",
+          "title": "20221130144007__MG_6476 (1)",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130144007__MG_6476%20%281%29.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130144007__MG_6476 (1)",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130144102-img-3600-jpg",
+          "title": "20221130144102_IMG_3600",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130144102_IMG_3600.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130144102_IMG_3600",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130144928-img-3615-jpg",
+          "title": "20221130144928_IMG_3615",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130144928_IMG_3615.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130144928_IMG_3615",
+          "date": "2022-11-30"
+        },
+        {
+          "id": "photography-birulia-zamindar-bari-20221130145354-img-3623-jpg",
+          "title": "20221130145354_IMG_3623",
+          "image": "/projects/Photography/Birulia%20Zamindar%20Bari/20221130145354_IMG_3623.jpg",
+          "alt": "Birulia Zamindar Bari — 20221130145354_IMG_3623",
+          "date": "2022-11-30"
+        }
+      ]
+    },
+    {
+      "id": "photography-jolshiri-park",
+      "title": "Jolshiri Park",
+      "description": "",
+      "date": "2022-10-26",
+      "coverImage": {
+        "image": "/projects/Photography/Jolshiri%20Park/20221026120048_IMG_2103%20%281%29.jpg",
+        "alt": "Jolshiri Park — 20221026120048_IMG_2103 (1)"
+      },
+      "images": [
+        {
+          "id": "photography-jolshiri-park-20221026120048-img-2103-1-jpg",
+          "title": "20221026120048_IMG_2103 (1)",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026120048_IMG_2103%20%281%29.jpg",
+          "alt": "Jolshiri Park — 20221026120048_IMG_2103 (1)",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026120358-img-2108-1-jpg",
+          "title": "20221026120358_IMG_2108 (1)",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026120358_IMG_2108%20%281%29.jpg",
+          "alt": "Jolshiri Park — 20221026120358_IMG_2108 (1)",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026120505-img-2113-jpg",
+          "title": "20221026120505_IMG_2113",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026120505_IMG_2113.jpg",
+          "alt": "Jolshiri Park — 20221026120505_IMG_2113",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026121503-img-2145-jpg",
+          "title": "20221026121503_IMG_2145",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026121503_IMG_2145.jpg",
+          "alt": "Jolshiri Park — 20221026121503_IMG_2145",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026122045-img-2167-jpg",
+          "title": "20221026122045_IMG_2167",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026122045_IMG_2167.jpg",
+          "alt": "Jolshiri Park — 20221026122045_IMG_2167",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026122621-img-2183-jpg",
+          "title": "20221026122621_IMG_2183",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026122621_IMG_2183.jpg",
+          "alt": "Jolshiri Park — 20221026122621_IMG_2183",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026123710-img-2211-jpg",
+          "title": "20221026123710_IMG_2211",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026123710_IMG_2211.jpg",
+          "alt": "Jolshiri Park — 20221026123710_IMG_2211",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026124653-img-2231-jpg",
+          "title": "20221026124653_IMG_2231",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026124653_IMG_2231.jpg",
+          "alt": "Jolshiri Park — 20221026124653_IMG_2231",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026125454-img-2257-jpg",
+          "title": "20221026125454_IMG_2257",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026125454_IMG_2257.jpg",
+          "alt": "Jolshiri Park — 20221026125454_IMG_2257",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026125706-img-2267-jpg",
+          "title": "20221026125706_IMG_2267",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026125706_IMG_2267.jpg",
+          "alt": "Jolshiri Park — 20221026125706_IMG_2267",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026125949-img-2274-jpg",
+          "title": "20221026125949_IMG_2274",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026125949_IMG_2274.jpg",
+          "alt": "Jolshiri Park — 20221026125949_IMG_2274",
+          "date": "2022-10-26"
+        },
+        {
+          "id": "photography-jolshiri-park-20221026131251-img-2302-jpg",
+          "title": "20221026131251_IMG_2302",
+          "image": "/projects/Photography/Jolshiri%20Park/20221026131251_IMG_2302.jpg",
+          "alt": "Jolshiri Park — 20221026131251_IMG_2302",
+          "date": "2022-10-26"
+        }
+      ]
+    },
+    {
+      "id": "photography-street-photography",
+      "title": "Street Photography",
+      "description": "",
+      "coverImage": {
+        "image": "/projects/Photography/Street%20Photography/_MG_0004.jpg",
+        "alt": "Street Photography — _MG_0004"
+      },
+      "images": [
+        {
+          "id": "photography-street-photography-mg-0004-jpg",
+          "title": "_MG_0004",
+          "image": "/projects/Photography/Street%20Photography/_MG_0004.jpg",
+          "alt": "Street Photography — _MG_0004"
+        },
+        {
+          "id": "photography-street-photography-mg-0014-jpg",
+          "title": "_MG_0014",
+          "image": "/projects/Photography/Street%20Photography/_MG_0014.jpg",
+          "alt": "Street Photography — _MG_0014"
+        },
+        {
+          "id": "photography-street-photography-mg-9878-jpg",
+          "title": "_MG_9878",
+          "image": "/projects/Photography/Street%20Photography/_MG_9878.jpg",
+          "alt": "Street Photography — _MG_9878"
+        },
+        {
+          "id": "photography-street-photography-mg-9895-1-jpg",
+          "title": "_MG_9895 (1)",
+          "image": "/projects/Photography/Street%20Photography/_MG_9895%20%281%29.jpg",
+          "alt": "Street Photography — _MG_9895 (1)"
+        },
+        {
+          "id": "photography-street-photography-mg-9896-1-jpg",
+          "title": "_MG_9896 (1)",
+          "image": "/projects/Photography/Street%20Photography/_MG_9896%20%281%29.jpg",
+          "alt": "Street Photography — _MG_9896 (1)"
+        },
+        {
+          "id": "photography-street-photography-mg-9906-1-jpg",
+          "title": "_MG_9906 (1)",
+          "image": "/projects/Photography/Street%20Photography/_MG_9906%20%281%29.jpg",
+          "alt": "Street Photography — _MG_9906 (1)"
+        },
+        {
+          "id": "photography-street-photography-mg-9913-jpg",
+          "title": "_MG_9913",
+          "image": "/projects/Photography/Street%20Photography/_MG_9913.jpg",
+          "alt": "Street Photography — _MG_9913"
+        },
+        {
+          "id": "photography-street-photography-mg-9936-jpg",
+          "title": "_MG_9936",
+          "image": "/projects/Photography/Street%20Photography/_MG_9936.jpg",
+          "alt": "Street Photography — _MG_9936"
+        },
+        {
+          "id": "photography-street-photography-mg-9951-jpg",
+          "title": "_MG_9951",
+          "image": "/projects/Photography/Street%20Photography/_MG_9951.jpg",
+          "alt": "Street Photography — _MG_9951"
+        },
+        {
+          "id": "photography-street-photography-mg-9955-jpg",
+          "title": "_MG_9955",
+          "image": "/projects/Photography/Street%20Photography/_MG_9955.jpg",
+          "alt": "Street Photography — _MG_9955"
+        },
+        {
+          "id": "photography-street-photography-mg-9972-jpg",
+          "title": "_MG_9972",
+          "image": "/projects/Photography/Street%20Photography/_MG_9972.jpg",
+          "alt": "Street Photography — _MG_9972"
+        },
+        {
+          "id": "photography-street-photography-mg-9989-1-jpg",
+          "title": "_MG_9989 (1)",
+          "image": "/projects/Photography/Street%20Photography/_MG_9989%20%281%29.jpg",
+          "alt": "Street Photography — _MG_9989 (1)"
+        }
+      ]
+    },
+    {
+      "id": "photography-tajhat-zamindar-bari",
+      "title": "Tajhat Zamindar Bari",
+      "description": "",
+      "date": "2022-10-07",
+      "coverImage": {
+        "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007122632_IMG_0420.jpg",
+        "alt": "Tajhat Zamindar Bari — 20221007122632_IMG_0420"
+      },
+      "images": [
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007122632-img-0420-jpg",
+          "title": "20221007122632_IMG_0420",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007122632_IMG_0420.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007122632_IMG_0420",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007123712-img-0434-jpg",
+          "title": "20221007123712_IMG_0434",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007123712_IMG_0434.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007123712_IMG_0434",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007124525-img-0449-jpg",
+          "title": "20221007124525_IMG_0449",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007124525_IMG_0449.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007124525_IMG_0449",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007124616-img-0451-jpg",
+          "title": "20221007124616_IMG_0451",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007124616_IMG_0451.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007124616_IMG_0451",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007125040-img-0465-1-jpg",
+          "title": "20221007125040_IMG_0465 (1)",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007125040_IMG_0465%20%281%29.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007125040_IMG_0465 (1)",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007125406-img-0477-jpg",
+          "title": "20221007125406_IMG_0477",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007125406_IMG_0477.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007125406_IMG_0477",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007130301-img-0490-1-jpg",
+          "title": "20221007130301_IMG_0490 (1)",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007130301_IMG_0490%20%281%29.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007130301_IMG_0490 (1)",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007130749-img-0506-jpg",
+          "title": "20221007130749_IMG_0506",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007130749_IMG_0506.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007130749_IMG_0506",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007131429-img-0510-jpg",
+          "title": "20221007131429_IMG_0510",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007131429_IMG_0510.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007131429_IMG_0510",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007131815-img-0521-1-jpg",
+          "title": "20221007131815_IMG_0521 (1)",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007131815_IMG_0521%20%281%29.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007131815_IMG_0521 (1)",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007135841-img-0531-1-jpg",
+          "title": "20221007135841_IMG_0531 (1)",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007135841_IMG_0531%20%281%29.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007135841_IMG_0531 (1)",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007140212-img-0539-jpg",
+          "title": "20221007140212_IMG_0539",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007140212_IMG_0539.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007140212_IMG_0539",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007140407-img-0543-jpg",
+          "title": "20221007140407_IMG_0543",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007140407_IMG_0543.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007140407_IMG_0543",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007140519-img-0546-jpg",
+          "title": "20221007140519_IMG_0546",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007140519_IMG_0546.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007140519_IMG_0546",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007141438-img-0574-jpg",
+          "title": "20221007141438_IMG_0574",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007141438_IMG_0574.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007141438_IMG_0574",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007142945-img-0621-jpg",
+          "title": "20221007142945_IMG_0621",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007142945_IMG_0621.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007142945_IMG_0621",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007143720-img-0640-1-jpg",
+          "title": "20221007143720_IMG_0640 (1)",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007143720_IMG_0640%20%281%29.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007143720_IMG_0640 (1)",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007143939-img-0654-jpg",
+          "title": "20221007143939_IMG_0654",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007143939_IMG_0654.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007143939_IMG_0654",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007144249-img-0667-jpg",
+          "title": "20221007144249_IMG_0667",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007144249_IMG_0667.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007144249_IMG_0667",
+          "date": "2022-10-07"
+        },
+        {
+          "id": "photography-tajhat-zamindar-bari-20221007144915-img-0685-jpg",
+          "title": "20221007144915_IMG_0685",
+          "image": "/projects/Photography/Tajhat%20Zamindar%20Bari/20221007144915_IMG_0685.jpg",
+          "alt": "Tajhat Zamindar Bari — 20221007144915_IMG_0685",
+          "date": "2022-10-07"
+        }
+      ]
+    }
+  ],
+  "Graphics": [
+    {
+      "id": "graphics-uphcsdp-ii",
+      "title": "UPHCSDP-II",
+      "description": "",
+      "coverImage": {
+        "image": "/projects/Graphics/UPHCSDP-II/%E0%A7%A7%E0%A7%AB%20%E0%A6%AC%E0%A6%9B%E0%A6%B0%20%E0%A6%AC%E0%A6%AF%E0%A6%BC%E0%A6%B8%E0%A7%87%20%E0%A6%9F%E0%A6%BF%E0%A6%9F%E0%A6%BF%20%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A6%BE.png",
+        "alt": "UPHCSDP-II — ১৫ বছর বয়সে টিটি টিকা"
+      },
+      "images": [
+        {
+          "id": "graphics-uphcsdp-ii-১৫-বছর-বয়সে-টিটি-টিকা-png",
+          "title": "১৫ বছর বয়সে টিটি টিকা",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A7%A7%E0%A7%AB%20%E0%A6%AC%E0%A6%9B%E0%A6%B0%20%E0%A6%AC%E0%A6%AF%E0%A6%BC%E0%A6%B8%E0%A7%87%20%E0%A6%9F%E0%A6%BF%E0%A6%9F%E0%A6%BF%20%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A6%BE.png",
+          "alt": "UPHCSDP-II — ১৫ বছর বয়সে টিটি টিকা"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-jamalpure-c-section-in-6-000-taka-png",
+          "title": "jamalpure c-section in 6,000 taka",
+          "image": "/projects/Graphics/UPHCSDP-II/jamalpure%20c-section%20in%206%2C000%20taka.png",
+          "alt": "UPHCSDP-II — jamalpure c-section in 6,000 taka"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-pregnancy-before-20-png",
+          "title": "pregnancy before 20",
+          "image": "/projects/Graphics/UPHCSDP-II/pregnancy%20before%2020.png",
+          "alt": "UPHCSDP-II — pregnancy before 20"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-গর্ভকালীন-৫-টি-বিপদ-চিহ্ন-png",
+          "title": "গর্ভকালীন ৫ টি বিপদ চিহ্ন",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%97%E0%A6%B0%E0%A7%8D%E0%A6%AD%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%80%E0%A6%A8%20%E0%A7%AB%20%E0%A6%9F%E0%A6%BF%20%E0%A6%AC%E0%A6%BF%E0%A6%AA%E0%A6%A6%20%E0%A6%9A%E0%A6%BF%E0%A6%B9%E0%A7%8D%E0%A6%A8%20.png",
+          "alt": "UPHCSDP-II — গর্ভকালীন ৫ টি বিপদ চিহ্ন"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-গর্ভকালীন-চেকআপের-সময়সূচী-png",
+          "title": "গর্ভকালীন চেকআপের সময়সূচী",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%97%E0%A6%B0%E0%A7%8D%E0%A6%AD%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%80%E0%A6%A8%20%E0%A6%9A%E0%A7%87%E0%A6%95%E0%A6%86%E0%A6%AA%E0%A7%87%E0%A6%B0%20%E0%A6%B8%E0%A6%AE%E0%A6%AF%E0%A6%BC%E0%A6%B8%E0%A7%82%E0%A6%9A%E0%A7%80%20.png",
+          "alt": "UPHCSDP-II — গর্ভকালীন চেকআপের সময়সূচী"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-গর্ভকালীন-সময়ে-টিটি-টিকা-png",
+          "title": "গর্ভকালীন সময়ে টিটি টিকা",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%97%E0%A6%B0%E0%A7%8D%E0%A6%AD%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%80%E0%A6%A8%20%E0%A6%B8%E0%A6%AE%E0%A6%AF%E0%A6%BC%E0%A7%87%20%E0%A6%9F%E0%A6%BF%E0%A6%9F%E0%A6%BF%20%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A6%BE%20.png",
+          "alt": "UPHCSDP-II — গর্ভকালীন সময়ে টিটি টিকা"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-টিটি-টিকার-ডোজ-png",
+          "title": "টিটি টিকার ডোজ",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%9F%E0%A6%BF%E0%A6%9F%E0%A6%BF%20%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A6%BE%E0%A6%B0%20%E0%A6%A1%E0%A7%8B%E0%A6%9C.png",
+          "alt": "UPHCSDP-II — টিটি টিকার ডোজ"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-নবজাতকের-টিকা-png",
+          "title": "নবজাতকের টিকা",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%A8%E0%A6%AC%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%95%E0%A7%87%E0%A6%B0%20%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A6%BE.png",
+          "alt": "UPHCSDP-II — নবজাতকের টিকা"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-নবজাতকের-বিপদচিহ্ন-png",
+          "title": "নবজাতকের বিপদচিহ্ন",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%A8%E0%A6%AC%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%95%E0%A7%87%E0%A6%B0%20%E0%A6%AC%E0%A6%BF%E0%A6%AA%E0%A6%A6%E0%A6%9A%E0%A6%BF%E0%A6%B9%E0%A7%8D%E0%A6%A8%20.png",
+          "alt": "UPHCSDP-II — নবজাতকের বিপদচিহ্ন"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-নবজাতকের-যত্ন-1-png",
+          "title": "নবজাতকের যত্ন 1",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%A8%E0%A6%AC%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%95%E0%A7%87%E0%A6%B0%20%E0%A6%AF%E0%A6%A4%E0%A7%8D%E0%A6%A8%201.png",
+          "alt": "UPHCSDP-II — নবজাতকের যত্ন 1"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-নবজাতকের-যত্ন-2-png",
+          "title": "নবজাতকের যত্ন 2",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%A8%E0%A6%AC%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%95%E0%A7%87%E0%A6%B0%20%E0%A6%AF%E0%A6%A4%E0%A7%8D%E0%A6%A8%202.png",
+          "alt": "UPHCSDP-II — নবজাতকের যত্ন 2"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-নিরাপদ-প্রসব-নিশ্চিত-করতে-png",
+          "title": "নিরাপদ প্রসব নিশ্চিত করতে",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%AA%E0%A6%A6%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A6%AC%20%E0%A6%A8%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%9A%E0%A6%BF%E0%A6%A4%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87.png",
+          "alt": "UPHCSDP-II — নিরাপদ প্রসব নিশ্চিত করতে"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-প্রসব-পরবর্তী-চেকআপ-ও-সেবা-png",
+          "title": "প্রসব পরবর্তী চেকআপ ও সেবা",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A6%AC%20%E0%A6%AA%E0%A6%B0%E0%A6%AC%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A7%80%20%E0%A6%9A%E0%A7%87%E0%A6%95%E0%A6%86%E0%A6%AA%20%E0%A6%93%20%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE%20.png",
+          "alt": "UPHCSDP-II — প্রসব পরবর্তী চেকআপ ও সেবা"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-প্রসবের-প্রস্তুতি-png",
+          "title": "প্রসবের প্রস্তুতি",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A6%AC%E0%A7%87%E0%A6%B0%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A7%81%E0%A6%A4%E0%A6%BF.png",
+          "alt": "UPHCSDP-II — প্রসবের প্রস্তুতি"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-মা-হওয়ার-বয়স-png",
+          "title": "মা হওয়ার বয়স",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%AE%E0%A6%BE%20%E0%A6%B9%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%20%E0%A6%AC%E0%A6%AF%E0%A6%BC%E0%A6%B8.png",
+          "alt": "UPHCSDP-II — মা হওয়ার বয়স"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-শিশুর-সঠিক-খাবার-png",
+          "title": "শিশুর সঠিক খাবার",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%B6%E0%A6%BF%E0%A6%B6%E0%A7%81%E0%A6%B0%20%E0%A6%B8%E0%A6%A0%E0%A6%BF%E0%A6%95%20%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0%20.png",
+          "alt": "UPHCSDP-II — শিশুর সঠিক খাবার"
+        },
+        {
+          "id": "graphics-uphcsdp-ii-স্বল্পমূল্যে-সেবা-1-png",
+          "title": "স্বল্পমূল্যে সেবা (1)",
+          "image": "/projects/Graphics/UPHCSDP-II/%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%B2%E0%A7%8D%E0%A6%AA%E0%A6%AE%E0%A7%82%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A7%87%20%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE%20%281%29.png",
+          "alt": "UPHCSDP-II — স্বল্পমূল্যে সেবা (1)"
+        }
+      ]
+    }
+  ]
+}

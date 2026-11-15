@@ -14,13 +14,16 @@ export function useGallery() {
 }
 
 export function GalleryProvider({ children }: { children: React.ReactNode }) {
-  const [selected, setSelected] = useState<PortfolioItem | null>(null);
-  const open = useCallback((item: PortfolioItem) => setSelected(item), []);
+  const [selected, setSelected] = useState<{ item: PortfolioItem; trigger: HTMLElement | null } | null>(null);
+  const open = useCallback((item: PortfolioItem) => {
+    const trigger = document.activeElement;
+    setSelected({ item, trigger: trigger instanceof HTMLElement ? trigger : null });
+  }, []);
   const close = useCallback(() => setSelected(null), []);
   return (
     <GalleryContext.Provider value={{ open }}>
       <div className="w-full" inert={selected ? true : undefined}>{children}</div>
-      {selected && <ProjectModal item={selected} onClose={close} />}
+      {selected && <ProjectModal item={selected.item} trigger={selected.trigger} onClose={close} />}
     </GalleryContext.Provider>
   );
 }
@@ -29,19 +32,19 @@ export function ImageCard({ item, className = "", priority = false }: { item: Po
   const { open } = useGallery();
   return (
     <button type="button" className={`group relative flex min-w-0 cursor-pointer overflow-hidden bg-[#d9d9d9] outline-offset-4 focus-visible:outline-2 focus-visible:outline-[#520000] ${className}`} aria-label={`View ${item.title}`} onClick={() => open(item)}>
-      <Image src={item.image} alt={item.alt} fill unoptimized priority={priority} sizes="(max-width: 767px) 90vw, (max-width: 1199px) 60vw, 900px"
-        className="object-cover transition-[transform,filter] duration-[450ms] group-hover:scale-[1.015] group-hover:brightness-[.97] motion-reduce:transition-none" />
+      <Image src={item.image} alt={item.alt} fill priority={priority} sizes="(max-width: 767px) 90vw, (max-width: 1199px) 60vw, 900px"
+        className="object-cover transition-[transform,filter] duration-[450ms] group-hover:brightness-[.97] motion-reduce:transition-none" />
     </button>
   );
 }
 
-function ProjectModal({ item, onClose }: { item: PortfolioItem; onClose: () => void }) {
+function ProjectModal({ item, trigger, onClose }: { item: PortfolioItem; trigger: HTMLElement | null; onClose: () => void }) {
   const lenis = useLenis();
   const descriptionId = useId();
+  const description = item.description?.trim();
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const trigger = document.activeElement as HTMLElement | null;
     const previousOverflow = document.body.style.overflow;
     const wasStopped = lenis?.isStopped;
     lenis?.stop();
@@ -61,15 +64,15 @@ function ProjectModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
       if (!wasStopped) lenis?.start();
       trigger?.focus();
     };
-  }, [lenis, onClose]);
+  }, [lenis, onClose, trigger]);
 
-  const date = new Date(`${item.date}T00:00:00Z`);
-  const dateLabel = Number.isNaN(date.getTime()) ? item.date : new Intl.DateTimeFormat("en-GB", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: "UTC" }).format(date);
+  const date = item.date ? new Date(`${item.date}T00:00:00Z`) : null;
+  const dateLabel = date && !Number.isNaN(date.getTime()) ? new Intl.DateTimeFormat("en-GB", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: "UTC" }).format(date) : item.date;
 
   return (
     <div className="fixed inset-0 z-80 flex items-center justify-center overflow-y-auto bg-[rgb(20_10_10/55%)] p-[18px] backdrop-blur-[5px] md:p-8"
       data-testid="modal-backdrop" data-lenis-prevent onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-      <section role="dialog" aria-modal="true" aria-label={item.title} aria-describedby={descriptionId}
+      <section role="dialog" aria-modal="true" aria-label={item.title} aria-describedby={description ? descriptionId : undefined}
         className="relative flex max-h-[calc(100dvh-36px)] w-full max-w-[1280px] flex-col overflow-y-auto bg-white shadow-[0_24px_100px_#0003] md:max-h-[calc(100dvh-64px)]">
         <button type="button" ref={closeRef} aria-label="Close project" onClick={onClose}
           className="absolute top-3 right-3 z-10 flex size-8 cursor-pointer items-center justify-center bg-white/80 text-[#555] outline-offset-4 hover:bg-white focus-visible:outline-2 focus-visible:outline-[#520000]">
@@ -78,9 +81,9 @@ function ProjectModal({ item, onClose }: { item: PortfolioItem; onClose: () => v
         <div className="relative flex aspect-[158/94] max-h-[70dvh] min-h-40 w-full shrink bg-[#d9d9d9] md:min-h-[200px]">
           <Image src={item.image} alt={item.alt} fill unoptimized sizes="(max-width: 1280px) 100vw, 1280px" className="object-contain" />
         </div>
-        <div className="flex w-full min-w-0 shrink-0 flex-col gap-6 p-5 md:min-h-[184px] md:p-8">
-          <p id={descriptionId} className="text-[17px] leading-[1.55] text-[#656565] md:max-w-[70%] md:text-[20px] md:leading-[1.42]">{item.description}</p>
-          <time dateTime={item.date} className="self-end font-[Calibri,'Segoe_UI',Arial,sans-serif] text-right text-sm text-[#656565] md:text-base">{dateLabel}</time>
+        <div className={`flex w-full min-w-0 shrink-0 flex-col gap-6 p-5 md:p-8 ${description ? "md:min-h-[184px]" : ""}`}>
+          {description && <p id={descriptionId} className="text-[17px] leading-[1.55] text-[#656565] md:max-w-[70%] md:text-[20px] md:leading-[1.42]">{description}</p>}
+          {item.date && <time dateTime={item.date} className="self-end font-[Calibri,'Segoe_UI',Arial,sans-serif] text-right text-sm text-[#656565] md:text-base">{dateLabel}</time>}
         </div>
       </section>
     </div>

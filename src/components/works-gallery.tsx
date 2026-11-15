@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ImageCard } from "@/components/gallery";
+import { ProjectCard } from "@/components/project-card";
 import {
   workCategories,
   worksByCategory,
@@ -9,7 +9,7 @@ import {
 } from "@/data/content";
 
 export function WorksGallery() {
-  const [selected, setSelected] = useState<WorkCategory>("Photography");
+  const [selected, setSelected] = useState<WorkCategory>(workCategories[0]);
 
   return (
     <main
@@ -23,9 +23,9 @@ export function WorksGallery() {
         aria-label={`${selected} projects`}
       >
         {worksByCategory[selected].map((item, index) => (
-          <ImageCard
+          <ProjectCard
             key={item.id}
-            item={item}
+            project={item}
             className="aspect-square shrink-0 basis-[calc((100%_-_1.5rem)/3)] sm:basis-[calc((100%_-_2rem)/3)]"
             priority={index < 3}
           />

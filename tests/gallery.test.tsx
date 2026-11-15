@@ -2,7 +2,7 @@ import React from "react";
 import { describe, expect, it } from "vitest";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { GalleryProvider, ImageCard } from "@/components/gallery";
+import { GalleryProvider, ImageCard, useGallery } from "@/components/gallery";
 
 const item = {
   id: "test-project",
@@ -17,7 +17,33 @@ function renderCard() {
   return render(<GalleryProvider><ImageCard item={item} className="aspect-square" /></GalleryProvider>);
 }
 
+function FocusLossTrigger() {
+  const { open } = useGallery();
+  return <button onClick={(event) => { open(item); event.currentTarget.blur(); }}>Open image</button>;
+}
+
 describe("project popup", () => {
+  it("restores the trigger when the background loses focus as the modal opens", async () => {
+    const user = userEvent.setup();
+    render(<GalleryProvider><FocusLossTrigger /></GalleryProvider>);
+    const trigger = screen.getByRole("button", { name: "Open image" });
+    await user.click(trigger);
+    expect(screen.getByRole("dialog", { name: item.title })).toBeVisible();
+    await user.keyboard("{Escape}");
+    expect(trigger).toHaveFocus();
+  });
+
+  it.each([undefined, "", "   "])("opens an image without an empty description or ARIA reference (%s)", async (description) => {
+    const user = userEvent.setup();
+    render(<GalleryProvider><ImageCard item={{ ...item, description }} /></GalleryProvider>);
+    await user.click(screen.getByRole("button", { name: `View ${item.title}` }));
+    const dialog = screen.getByRole("dialog", { name: item.title });
+    expect(dialog).toBeVisible();
+    expect(dialog).not.toHaveAttribute("aria-describedby");
+    expect(dialog.querySelector("p")).not.toBeInTheDocument();
+    expect(within(dialog).getByText("12/01/2026")).toBeVisible();
+  });
+
   it("opens the image with a description and numeric date, without a visible title", async () => {
     const user = userEvent.setup();
     renderCard();

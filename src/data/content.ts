@@ -1,12 +1,23 @@
+import projectData from "./projects.json";
+
 export type PortfolioItem = {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   /** Use YYYY-MM-DD so dates display consistently. */
-  date: string;
-  /** Place files in public/images and use /images/your-file.jpg here. */
+  date?: string;
+  /** Public URL, with each filename/folder segment URL-encoded. */
   image: string;
   alt: string;
+};
+
+export type Project = {
+  id: string;
+  title: string;
+  description: string;
+  date?: string;
+  coverImage: { image: string; alt: string };
+  images: PortfolioItem[];
 };
 
 const placeholder = "/images/placeholder.svg";
@@ -36,33 +47,24 @@ export const profile = {
   } satisfies PortfolioItem,
 };
 
-export const projects = Array.from({ length: 9 }, (_, index): PortfolioItem => ({
-  id: `project-${index + 1}`,
-  title: `Project title ${index + 1}`,
-  description,
-  date: "2026-01-01",
-  image: placeholder,
-  alt: `Project ${index + 1} image placeholder`,
+export type WorkCategory = keyof typeof projectData;
+
+export const workCategories = Object.keys(projectData) as WorkCategory[];
+
+export const worksByCategory: Record<WorkCategory, Project[]> = projectData;
+
+export const projects = workCategories.flatMap((category) => worksByCategory[category]);
+
+export function getProjectById(id: string): Project | undefined {
+  return projects.find((project) => project.id === id);
+}
+
+export const homeProjects = projects.slice(0, 3).map((project, index) => ({
+  ...project,
+  images: project.images.slice(0, [3, 1, 2][index]),
 }));
 
-export const homeProjects = [
-  { title: "Project\ntitle 1", description, images: projects.slice(0, 3) },
-  { title: "Project\ntitle 2", description, images: [projects[3]] },
-  { title: "Project\ntitle 3", description, images: projects.slice(4, 6) },
-];
-
-export type WorkCategory = "Writings" | "Photography" | "Videography" | "Presentations";
-
-export const workCategories: WorkCategory[] = ["Writings", "Photography", "Videography", "Presentations"];
-
-// Replace each category's placeholder entries with your own projects.
-// Each category has independent titles, descriptions, dates, images and alt text.
-export const worksByCategory: Record<WorkCategory, PortfolioItem[]> = {
-  Writings: projects,
-  Photography: projects.map((item, index) => ({ ...item, id: `photography-${index + 1}`, title: `Photography project ${index + 1}`, alt: `Photography project ${index + 1} image placeholder` })),
-  Videography: projects.map((item, index) => ({ ...item, id: `videography-${index + 1}`, title: `Videography project ${index + 1}`, alt: `Videography project ${index + 1} image placeholder` })),
-  Presentations: projects.map((item, index) => ({ ...item, id: `presentations-${index + 1}`, title: `Presentations project ${index + 1}`, alt: `Presentations project ${index + 1} image placeholder` })),
-};
+export const homeClosingImage = projects[3]?.images[0] ?? projects[0]?.images[0] ?? profile.detail;
 
 export type SocialIcon = "linkedin" | "whatsapp" | "instagram" | "email";
 export type SocialLink = {

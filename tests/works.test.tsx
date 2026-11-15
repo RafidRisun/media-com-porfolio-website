@@ -6,24 +6,24 @@ import { GalleryProvider } from "@/components/gallery";
 import WorksPage from "@/app/works/page";
 
 describe("Works categories", () => {
-  it("selects Writings initially and switches projects for every category", async () => {
+  it("selects Photography initially and switches project links for every category", async () => {
     const user = userEvent.setup();
     render(<GalleryProvider><WorksPage /></GalleryProvider>);
-    expect(screen.getByRole("button", { name: "Writings" })).toHaveAttribute("aria-pressed", "true");
-    for (const label of ["Photography", "Videography", "Presentations", "Writings"]) {
+    expect(screen.getByRole("button", { name: "Photography" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.queryByRole("button", { name: "Writings" })).not.toBeInTheDocument();
+    for (const [label, count] of [["Graphics", 1], ["Photography", 4]] as const) {
       await user.click(screen.getByRole("button", { name: label }));
       expect(screen.getByRole("button", { name: label })).toHaveAttribute("aria-pressed", "true");
       const gallery = screen.getByRole("region", { name: `${label} projects` });
-      expect(within(gallery).getAllByRole("button")).toHaveLength(9);
+      expect(within(gallery).getAllByRole("link")).toHaveLength(count);
       expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     }
   });
 
-  it("opens the selected category's project details", async () => {
-    const user = userEvent.setup();
+  it("links each cover to its own project page instead of opening an image modal", () => {
     render(<GalleryProvider><WorksPage /></GalleryProvider>);
-    await user.click(screen.getByRole("button", { name: "Photography" }));
-    await user.click(screen.getByRole("button", { name: "View Photography project 1" }));
-    expect(screen.getByRole("dialog", { name: "Photography project 1" })).toBeVisible();
+    expect(screen.getByRole("link", { name: "View Birulia Zamindar Bari" })).toHaveAttribute("href", "/works/photography-birulia-zamindar-bari");
+    expect(screen.getByRole("link", { name: "View Jolshiri Park" })).toHaveAttribute("href", "/works/photography-jolshiri-park");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 });
