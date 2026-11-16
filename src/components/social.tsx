@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { socialLinks, socialPlaceholder, type SocialIcon, type SocialLink } from "@/data/content";
+import { socialLinks, socialPlaceholder } from "@/data/contact";
+import type { SocialIcon, SocialLink } from "@/types/portfolio";
 import { useGallery } from "./gallery";
 
 function Icon({ name }: { name: SocialIcon }) {

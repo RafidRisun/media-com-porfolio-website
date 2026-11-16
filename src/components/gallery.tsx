@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useLenis } from "lenis/react";
 import { createContext, useCallback, useContext, useEffect, useId, useRef, useState } from "react";
-import type { PortfolioItem, VideoItem } from "@/data/content";
+import type { PortfolioItem, VideoItem } from "@/types/portfolio";
 import { getYouTubeEmbedUrl } from "@/lib/youtube";
 
 type GalleryItem = PortfolioItem | VideoItem;
@@ -105,7 +105,7 @@ function ProjectModal({ item, trigger, onClose }: { item: GalleryItem; trigger: 
           <Image src={item.image} alt={item.alt} fill unoptimized sizes="(max-width: 1280px) 100vw, 1280px" className="object-contain" />
         </div>}
         {(description || item.date) && <div className={`flex w-full min-w-0 shrink-0 flex-col gap-6 p-5 md:p-8 ${description ? "md:min-h-[184px]" : ""}`}>
-          {description && <p id={descriptionId} className="text-[17px] leading-[1.55] text-[#656565] md:max-w-[70%] md:text-[20px] md:leading-[1.42]">{description}</p>}
+          {description && <p id={descriptionId} className="whitespace-pre-line text-[17px] leading-[1.55] text-[#656565] md:max-w-[70%] md:text-[20px] md:leading-[1.42]">{description}</p>}
           {item.date && <time dateTime={item.date} className="self-end font-[Calibri,'Segoe_UI',Arial,sans-serif] text-right text-sm text-[#656565] md:text-base">{dateLabel}</time>}
         </div>}
         {videoEmbedUrl && <span data-focus-guard tabIndex={0} aria-hidden="true" className="sr-only" onFocus={() => closeRef.current?.focus()} />}

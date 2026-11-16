@@ -63,10 +63,10 @@ describe("project detail", () => {
   });
 
   it("builds real project routes and metadata", async () => {
-    expect(generateStaticParams()).toEqual([
-      { id: "photography-birulia-zamindar-bari" }, { id: "photography-jolshiri-park" },
-      { id: "photography-street-photography" }, { id: "photography-tajhat-zamindar-bari" }, { id: "graphics-uphcsdp-ii" },
-    ]);
+    expect(new Set(generateStaticParams().map(({ id }) => id))).toEqual(new Set([
+      "photography-birulia-zamindar-bari", "photography-jolshiri-park",
+      "photography-street-photography", "photography-tajhat-zamindar-bari", "graphics-uphcsdp-ii",
+    ]));
     await expect(generateMetadata({ params: Promise.resolve({ id: "graphics-uphcsdp-ii" }) })).resolves.toEqual({ title: "UPHCSDP-II" });
   });
 

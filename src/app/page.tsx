@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ImageCard } from "@/components/gallery";
-import { homeClosingImage, homeProjects, profile } from "@/data/content";
+import { VideoTrigger } from "@/components/video-card";
+import { homeClosingImage, homeProjects, profile } from "@/data/home";
 
 export default function HomePage() {
   const [first, second, third] = homeProjects;
@@ -21,10 +22,10 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="project-one-title" className="flex w-full flex-col gap-7 md:flex-row md:gap-6 xl:gap-7">
-        <div className="flex min-w-0 flex-col justify-between gap-6 md:flex-1">
+        <div className="flex min-w-0 flex-col justify-between gap-6 [container-type:inline-size] md:flex-1">
           <div className="flex min-w-0 flex-col gap-6 md:gap-10">
-            <h2 id="project-one-title" className="whitespace-pre-line font-[family-name:var(--font-victory)] text-[60px] leading-[1.25] text-[#520000] uppercase md:text-[clamp(60px,7.2vw,104px)]">{first.title.replace(" ", "\n")}</h2>
-            <p className="min-w-0 text-[17px] leading-[1.55] text-[#656565] xl:text-[19px] xl:leading-[1.42]">{first.description}</p>
+            <h2 id="project-one-title" className="whitespace-pre-line font-[family-name:var(--font-victory)] text-[60px] leading-[1.25] text-[#520000] uppercase md:text-[clamp(32px,25cqw,104px)]">{first.title.replace(" ", "\n")}</h2>
+            <p className="min-w-0 whitespace-pre-line text-[17px] leading-[1.55] text-[#656565] xl:text-[19px] xl:leading-[1.42]">{first.description}</p>
           </div>
           <Link href={`/works/${first.id}`} className="inline-flex min-h-11 items-center self-start text-base text-[#520000] underline underline-offset-4 md:text-lg">See Project</Link>
         </div>
@@ -34,11 +35,13 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="project-two-title" className="flex w-full flex-col gap-7">
-        <ImageCard item={second.images[0]} className="aspect-[2.45] w-full" />
+        <div className="relative aspect-[2.45] w-full overflow-hidden bg-[#d9d9d9]">
+          <Image src={second.image} alt={second.alt} fill sizes="(max-width: 767px) 90vw, 1280px" className="object-cover" />
+        </div>
         <div className="flex flex-col gap-6 md:flex-row md:gap-12">
           <div className="flex min-w-0 flex-col justify-between gap-6 md:flex-1">
-            <p className="text-[17px] leading-[1.55] text-[#656565] xl:text-[19px] xl:leading-[1.42]">{second.description}</p>
-            <Link href={`/works/${second.id}`} className="inline-flex min-h-11 items-center self-start text-base text-[#520000] underline underline-offset-4 md:text-lg">See Project</Link>
+            <p className="whitespace-pre-line text-[17px] leading-[1.55] text-[#656565] xl:text-[19px] xl:leading-[1.42]">{second.description}</p>
+            <VideoTrigger video={second} className="inline-flex min-h-11 items-center self-start text-base text-[#520000] underline underline-offset-4 md:text-lg">See Project</VideoTrigger>
           </div>
           <h2 id="project-two-title" className="order-first whitespace-pre-line font-[family-name:var(--font-victory)] text-[60px] leading-[1.25] text-[#520000] uppercase md:order-none md:flex-[.3] md:text-[clamp(60px,7.2vw,104px)]">{second.title.replace(" ", "\n")}</h2>
         </div>
@@ -52,7 +55,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex min-w-0 flex-col justify-between gap-6">
-          <p className="text-[17px] leading-[1.55] text-[#656565] xl:text-[19px] xl:leading-[1.42]">{third.description}</p>
+          <p className="whitespace-pre-line text-[17px] leading-[1.55] text-[#656565] xl:text-[19px] xl:leading-[1.42]">{third.description}</p>
           <Link href={`/works/${third.id}`} className="inline-flex min-h-11 items-center self-start text-base text-[#520000] underline underline-offset-4 md:text-lg">See Project</Link>
         </div>
       </section>

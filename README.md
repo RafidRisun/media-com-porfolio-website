@@ -1,6 +1,6 @@
 # Zannatul Urmi portfolio
 
-Next.js App Router + TypeScript + Tailwind CSS. Project images come from `public/projects`; profile images and introductory text still use placeholders.
+Next.js App Router + TypeScript + Tailwind CSS. Project images come from `public/projects`; page content is organized into Home, Projects, and Contact data modules.
 
 ## Run locally
 
@@ -87,12 +87,13 @@ Use a unique `id` for each entry. `description` is optional. Leave `image` as `"
 
 Selecting Videography shows widescreen thumbnail cards with the same fitted Victory title fade. Clicking a card opens its YouTube player and description in the shared modal. The player supports inline playback and fullscreen; closing the modal removes the player and stops playback. Other project categories continue to open their image galleries.
 
-Edit **src/data/content.ts** for other content:
+Page content is organized in **src/data/**:
 
-- `profile`: your name, introduction, portrait and small hero image.
-- `homeProjects`: featured projects and their image arrangements on Home. The three See Project links open the matching project galleries.
-- `projects`, `worksByCategory`, and `getProjectById`: typed views and lookups of the JSON data. Categories come from the imported folders, with Photography first. Choosing another category changes the covers and the large sidebar heading. Clicking a cover opens its `/works/[id]` page.
-- `socialLinks` and `contactLinks`: labels, icons and destinations. Empty destinations open a placeholder popup; add real URLs or `mailto:you@example.com` to activate links.
+- **home.ts**: `profile`, the independent `description` and `closingDescription` text, `homeProjects`, and `homeClosingImage`. Home features Tajhat, Conch Bangles of Old Dhaka, and UPHCSDP-II. The Conch preview is a plain image; its See Project button opens the video. The other See Project links open the matching project galleries.
+- **projects.ts**: typed views and lookups of **projects.json** and **videos.json**, including `projects`, `worksByCategory`, `videos`, and `getProjectById`. Categories come from the imported folders, with Photography first. Choosing another category changes the covers and the large sidebar heading. Clicking a cover opens its `/works/[id]` page.
+- **contact.ts**: the Contact heading, image, and `contactLinks`. The footer's `socialLinks` use the same list so destinations stay in sync. Empty destinations open a placeholder popup; add real URLs or `mailto:you@example.com` to activate links.
+
+Shared portfolio, project, video, category, and social-link types live in **src/types/portfolio.ts**. Import types directly from that file.
 
 Project pages show the category and project title aligned left above the image grid, with a Return to works button. The grid contains only that project's images, with four columns on desktop and two on phones. Clicking an image opens the existing popup. The popup uses the clicked image's JSON object, so its details stay in sync. Dates use `YYYY-MM-DD`.
 

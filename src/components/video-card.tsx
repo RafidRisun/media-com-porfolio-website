@@ -2,7 +2,12 @@
 
 import { CardCover } from "@/components/card-cover";
 import { useGallery } from "@/components/gallery";
-import type { VideoItem } from "@/data/content";
+import type { VideoItem } from "@/types/portfolio";
+
+export function VideoTrigger({ video, children, className = "" }: { video: VideoItem; children: React.ReactNode; className?: string }) {
+  const { open } = useGallery();
+  return <button type="button" onClick={() => open(video)} className={`cursor-pointer ${className}`}>{children}</button>;
+}
 
 export function VideoCard({ video, className = "", priority = false }: { video: VideoItem; className?: string; priority?: boolean }) {
   const { open } = useGallery();

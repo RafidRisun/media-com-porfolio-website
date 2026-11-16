@@ -1,5 +1,6 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { GalleryProvider } from "@/components/gallery";
 import HomePage from "@/app/page";
@@ -9,28 +10,48 @@ vi.mock("@/data/projects.json", async (importOriginal) => {
   return {
     default: {
       ...data,
-      Photography: data.Photography.map((project, index) => index === 0 ? { ...project, title: "Stories from Dhaka" } : project),
+      Photography: [...data.Photography].reverse().map((project) => project.id === "photography-tajhat-zamindar-bari" ? { ...project, title: "Stories from Dhaka" } : project),
     },
   };
 });
 
+vi.mock("@/data/videos.json", () => ({ default: [{
+  id: "video-2",
+  title: "Conch Bangles of Old Dhaka",
+  description: "The conch bangles film.",
+  link: "https://youtu.be/2vJ5-LlL3sI",
+  image: "",
+}] }));
+
 describe("featured projects", () => {
-  it("uses the featured project's JSON title after it is renamed", () => {
+  it("keeps the selected projects in order and uses their JSON titles regardless of JSON order", () => {
     render(<GalleryProvider><HomePage /></GalleryProvider>);
-    expect(screen.getByRole("heading", { level: 2, name: /Stories\s+from Dhaka/ })).toBeVisible();
+    const titles = screen.getAllByRole("heading", { level: 2 })
+      .map((heading) => heading.textContent?.replace(/\s+/g, " ").trim());
+    expect(titles).toEqual(["Stories from Dhaka", "Conch Bangles of Old Dhaka", "UPHCSDP-II"]);
+    expect(screen.getAllByRole("link", { name: "See Project" }).map((link) => link.getAttribute("href"))).toEqual([
+      "/works/photography-tajhat-zamindar-bari", "/works/graphics-uphcsdp-ii",
+    ]);
   });
 
-  it("links each featured preview to its own project's gallery", () => {
+  it("uses Shakha as a plain, noninteractive Home image", () => {
     render(<GalleryProvider><HomePage /></GalleryProvider>);
-    const links = screen.getAllByRole("link", { name: "See Project" });
-    expect(links.map((link) => link.getAttribute("href"))).toEqual([
-      "/works/photography-birulia-zamindar-bari", "/works/photography-jolshiri-park", "/works/photography-street-photography",
-    ]);
-    expect(screen.getByRole("button", { name: "View 20221130131024_IMG_3160" })).toBeVisible();
-    expect(screen.getByRole("button", { name: "View 20221026120048_IMG_2103 (1)" })).toBeVisible();
-    expect(screen.getByRole("button", { name: "View _MG_0004" })).toBeVisible();
-    const closing = screen.getByRole("region", { name: "More about my work" });
-    const closingImageUrl = new URL(closing.querySelector("img")!.getAttribute("src")!, "http://localhost");
-    expect(closingImageUrl.searchParams.get("url")).toBe("/projects/Photography/Tajhat%20Zamindar%20Bari/20221007122632_IMG_0420.jpg");
+    const preview = screen.getByRole("region", { name: /Conch\s+Bangles of Old Dhaka/ });
+    const image = within(preview).getByRole("img");
+    const url = new URL(image.getAttribute("src")!, "http://localhost");
+    expect(url.searchParams.get("url") ?? url.pathname).toBe("/images/shakha.png");
+    expect(image.closest("button, a")).toBeNull();
+    expect(screen.queryByRole("button", { name: "Play Conch Bangles of Old Dhaka" })).not.toBeInTheDocument();
+  });
+
+  it("opens the Conch Bangles video from See Project", async () => {
+    const user = userEvent.setup();
+    render(<GalleryProvider><HomePage /></GalleryProvider>);
+    await user.click(screen.getByRole("button", {
+      name: "See Project",
+    }));
+    const dialog = screen.getByRole("dialog", { name: "Conch Bangles of Old Dhaka" });
+    expect(within(dialog).getByTitle("YouTube player: Conch Bangles of Old Dhaka"))
+      .toHaveAttribute("src", "https://www.youtube-nocookie.com/embed/2vJ5-LlL3sI?playsinline=1&rel=0");
   });
 });

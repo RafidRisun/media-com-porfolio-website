@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ImageCard } from "@/components/gallery";
-import { getProjectById, projects, projectCategories, worksByCategory } from "@/data/content";
+import { getProjectById, projects, projectCategories, worksByCategory } from "@/data/projects";
 
 type WorkPageProps = { params: Promise<{ id: string }> };
 

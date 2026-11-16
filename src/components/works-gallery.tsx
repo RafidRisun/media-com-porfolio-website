@@ -7,8 +7,8 @@ import {
   workCategories,
   worksByCategory,
   videos,
-  type WorkCategory,
-} from "@/data/content";
+} from "@/data/projects";
+import type { WorkCategory } from "@/types/portfolio";
 
 export function WorksGallery() {
   const [selected, setSelected] = useState<WorkCategory>(workCategories[0]);

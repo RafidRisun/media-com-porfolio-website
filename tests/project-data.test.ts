@@ -2,7 +2,7 @@
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { projects } from "@/data/content";
+import { projects } from "@/data/projects";
 
 describe("imported portfolio", () => {
   it("uses unique route IDs and a cover from each project's own images", () => {

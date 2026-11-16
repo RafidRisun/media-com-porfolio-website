@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CardCover } from "@/components/card-cover";
-import type { Project } from "@/data/content";
+import type { Project } from "@/types/portfolio";
 
 export function ProjectCard({ project, className = "", priority = false }: { project: Project; className?: string; priority?: boolean }) {
   return (

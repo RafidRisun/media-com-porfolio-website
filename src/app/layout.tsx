@@ -6,7 +6,7 @@ import { GalleryProvider } from "@/components/gallery";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/social";
 import { SmoothScroll } from "@/components/smooth-scroll";
-import { profile } from "@/data/content";
+import { profile } from "@/data/home";
 
 const victory = localFont({ src: "../../public/fonts/victory-striker-sans-demo.otf", variable: "--font-victory", display: "swap" });
 const viaoda = localFont({ src: "../../node_modules/@fontsource/viaoda-libre/files/viaoda-libre-latin-400-normal.woff2", variable: "--font-viaoda", display: "swap" });
