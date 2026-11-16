@@ -7,9 +7,7 @@ const coverphoto = "/images/coverPhoto.jpg";
 
 const description = 'Communications professional with a background in Mass Communication and Journalism and experience in communication planning, project coordination, research, and content development. Skilled in crafting proposals, bilingual project narratives, and beneficiary stories, alongside visual communication and audiovisual production using Canva, Adobe Creative Suite, Google Workspace, and Microsoft Office. Dedicated to leveraging strategic storytelling to document development outcomes, amplify community voices, and strengthen public engagement.';
 
-const closingDescription = `A Little More to Explore
-
-I have always been drawn to stories, the ones people tell, the ones hidden in everyday moments, and the ones waiting to be discovered. Whether through words, photographs or moving images, I find meaning in observing the world, asking questions and capturing perspectives. 
+const closingDescription = `I have always been drawn to stories, the ones people tell, the ones hidden in everyday moments, and the ones waiting to be discovered. Whether through words, photographs or moving images, I find meaning in observing the world, asking questions and capturing perspectives. 
 
 This portfolio is only a glimpse of what I have explored and created so far. There is still so much to learn, see, experience and tell.
 
