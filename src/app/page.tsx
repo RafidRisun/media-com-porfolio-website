@@ -9,7 +9,7 @@ export default function HomePage() {
     <main id="main-content" className="flex w-full min-w-0 flex-col gap-[100px] md:gap-[180px] xl:gap-[240px]">
       <section aria-labelledby="hero-title" className="relative flex w-full flex-col items-start gap-7 md:flex-row md:gap-0">
         <div className="relative flex aspect-[.88] w-3/4 overflow-hidden bg-[#d9d9d9] md:w-7/12">
-          <Image src={profile.portrait.image} alt={profile.portrait.alt} fill unoptimized priority sizes="(max-width: 767px) 75vw, 750px" className="object-cover" />
+          <Image src={profile.coverPhoto.image} alt={profile.coverPhoto.alt} fill unoptimized priority sizes="(max-width: 767px) 75vw, 750px" className="object-cover" />
         </div>
         <div className="flex w-full min-w-0 flex-col items-end gap-7 text-right md:w-5/12 md:gap-14 md:pt-[170px] xl:pt-[240px]">
           <h1 id="hero-title" className="absolute top-8 right-0 whitespace-nowrap font-[family-name:var(--font-victory)] text-[clamp(32px,9.5vw,128px)] leading-none tracking-[-1px] text-[#520000] uppercase md:top-20">{profile.name}</h1>

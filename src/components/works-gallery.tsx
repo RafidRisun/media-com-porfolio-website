@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { ProjectCard } from "@/components/project-card";
+import { VideoCard } from "@/components/video-card";
 import {
   workCategories,
   worksByCategory,
+  videos,
   type WorkCategory,
 } from "@/data/content";
 
@@ -22,7 +24,11 @@ export function WorksGallery() {
         className="flex w-full min-w-0 flex-wrap content-start gap-3 sm:gap-4 md:w-auto md:flex-[3]"
         aria-label={`${selected} projects`}
       >
-        {worksByCategory[selected].map((item, index) => (
+        {selected === "Videography" ? videos.map((video, index) => (
+          <VideoCard key={video.id} video={video}
+            className="aspect-video shrink-0 basis-[calc((100%_-_.75rem)/2)] sm:basis-[calc((100%_-_2rem)/3)]"
+            priority={index < 3} />
+        )) : worksByCategory[selected].map((item, index) => (
           <ProjectCard
             key={item.id}
             project={item}
@@ -40,7 +46,7 @@ export function WorksGallery() {
             type="button"
             aria-pressed="true"
             aria-controls="works-gallery"
-            className={`cursor-pointer whitespace-nowrap outline-offset-4 focus-visible:outline-2 focus-visible:outline-[#520000] text-[clamp(28px,27cqw,74px)]`}
+            className="cursor-pointer whitespace-nowrap outline-offset-4 focus-visible:outline-2 focus-visible:outline-[#520000] text-[clamp(24px,20cqw,74px)]"
           >
             {selected}
           </button>

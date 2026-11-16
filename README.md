@@ -67,6 +67,26 @@ Project IDs form URLs such as `/works/photography-birulia-zamindar-bari`. Image 
 
 Project cards reveal their full title in white Victory lettering on hover or keyboard focus, with a 500ms fade and a subtle gradient for contrast. Titles scale uniformly to the card width and touch its bottom edge. Touch devices show the titles without requiring hover.
 
+### Videography
+
+Edit **src/data/videos.json** to add YouTube videos. This file is maintained separately and is not overwritten by `npm run sync:projects`. Replace the included YouTube demo with your own entries:
+
+```json
+[
+  {
+    "id": "my-video",
+    "link": "https://www.youtube.com/watch?v=M7lc1UVf-VE",
+    "title": "Your video title",
+    "description": "Your video description.",
+    "image": "/images/my-video-thumbnail.jpg"
+  }
+]
+```
+
+Use a unique `id` for each entry. `description` is optional. Leave `image` as `""` to use the video's own YouTube thumbnail automatically. A nonempty `image` overrides it with a local public path or a full thumbnail URL. Empty or invalid video links fall back to the grey placeholder. Normal YouTube links, `youtu.be` shares, Shorts, live-video links, and embed links are supported. Use videos that permit embedding.
+
+Selecting Videography shows widescreen thumbnail cards with the same fitted Victory title fade. Clicking a card opens its YouTube player and description in the shared modal. The player supports inline playback and fullscreen; closing the modal removes the player and stops playback. Other project categories continue to open their image galleries.
+
 Edit **src/data/content.ts** for other content:
 
 - `profile`: your name, introduction, portrait and small hero image.

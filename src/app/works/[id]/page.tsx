@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ImageCard } from "@/components/gallery";
-import { getProjectById, projects, workCategories, worksByCategory } from "@/data/content";
+import { getProjectById, projects, projectCategories, worksByCategory } from "@/data/content";
 
 type WorkPageProps = { params: Promise<{ id: string }> };
 
@@ -22,7 +22,7 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
   const project = getProjectById(id);
   if (!project) notFound();
 
-  const category = workCategories.find((name) => worksByCategory[name].some((item) => item.id === id));
+  const category = projectCategories.find((name) => worksByCategory[name].some((item) => item.id === id));
 
   return (
     <main id="main-content" className="flex w-full min-w-0 flex-col gap-7 md:gap-10">

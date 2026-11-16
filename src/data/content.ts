@@ -1,4 +1,6 @@
 import projectData from "./projects.json";
+import videoData from "./videos.json";
+import { getYouTubeThumbnailUrl } from "@/lib/youtube";
 
 export type PortfolioItem = {
   id: string;
@@ -20,7 +22,17 @@ export type Project = {
   images: PortfolioItem[];
 };
 
-const placeholder = "/images/placeholder.svg";
+export type VideoItem = PortfolioItem & { link: string };
+
+export const videos: VideoItem[] = videoData.map((video) => ({
+  ...video,
+  image: video.image.trim() || getYouTubeThumbnailUrl(video.link) || "/images/placeholder.svg",
+  alt: `Thumbnail for ${video.title}`,
+}));
+
+const placeholder = "/images/profilephoto.jpeg";
+
+const coverphoto = "/images/coverphoto.jpeg";
 
 const description =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -29,6 +41,10 @@ export const profile = {
   name: "Zannatul Urmi",
   introduction: description,
   closingText: description,
+  coverPhoto: {
+    image: coverphoto,
+    alt: "A detail from my creative practice",
+  },
   portrait: {
     id: "portrait",
     title: "Zannatul Urmi",
@@ -47,13 +63,15 @@ export const profile = {
   } satisfies PortfolioItem,
 };
 
-export type WorkCategory = keyof typeof projectData;
+export type ProjectCategory = keyof typeof projectData;
+export type WorkCategory = ProjectCategory | "Videography";
 
-export const workCategories = Object.keys(projectData) as WorkCategory[];
+export const projectCategories = Object.keys(projectData) as ProjectCategory[];
+export const workCategories: WorkCategory[] = [...projectCategories, "Videography"];
 
-export const worksByCategory: Record<WorkCategory, Project[]> = projectData;
+export const worksByCategory: Record<ProjectCategory, Project[]> = projectData;
 
-export const projects = workCategories.flatMap((category) => worksByCategory[category]);
+export const projects = projectCategories.flatMap((category) => worksByCategory[category]);
 
 export function getProjectById(id: string): Project | undefined {
   return projects.find((project) => project.id === id);
