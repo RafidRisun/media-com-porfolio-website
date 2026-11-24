@@ -15,16 +15,16 @@ function Icon({ name }: { name: SocialIcon }) {
   return <Image src={sources[name]} alt="" aria-hidden="true" width={21} height={21} unoptimized className="size-[21px] shrink-0 object-contain" />;
 }
 
-export function SocialAnchor({ link, showLabel = false }: { link: SocialLink; showLabel?: boolean }) {
+export function SocialAnchor({ link, showLabel = false, label = link.label }: { link: SocialLink; showLabel?: boolean; label?: string }) {
   const { open } = useGallery();
-  const className = `inline-flex cursor-pointer items-center gap-3 outline-offset-4 transition-colors hover:text-[#520000] focus-visible:outline-2 focus-visible:outline-[#520000] motion-reduce:transition-none ${showLabel ? "justify-start text-[22px] text-[#686868] md:text-[19px] xl:text-[24px]" : "justify-center p-1 text-[#898989]"}`;
-  const content = <><Icon name={link.icon} />{showLabel && <span>{link.label}</span>}</>;
+  const className = `inline-flex min-w-0 max-w-full cursor-pointer items-center gap-3 outline-offset-4 transition-colors hover:text-[#520000] focus-visible:outline-2 focus-visible:outline-[#520000] motion-reduce:transition-none ${showLabel ? "justify-start text-[22px] text-[#686868] md:text-[19px] xl:text-[24px]" : "justify-center p-1 text-[#898989]"}`;
+  const content = <><Icon name={link.icon} />{showLabel && <span className="min-w-0 [overflow-wrap:anywhere]">{label}</span>}</>;
 
   if (link.href) {
     const external = /^https?:\/\//.test(link.href);
-    return <a href={link.href} aria-label={link.label} className={className} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{content}</a>;
+    return <a href={link.href} aria-label={label} className={className} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{content}</a>;
   }
-  return <button type="button" aria-label={link.label} className={className} onClick={() => open(socialPlaceholder(link.label))}>{content}</button>;
+  return <button type="button" aria-label={label} className={className} onClick={() => open(socialPlaceholder(link.label))}>{content}</button>;
 }
 
 export function Footer() {

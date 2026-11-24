@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section aria-labelledby="contact-heading" className="flex min-w-0 flex-col gap-7 md:flex-1 md:gap-10 xl:gap-16">
         <h1 id="contact-heading" className="whitespace-nowrap font-[family-name:var(--font-victory)] text-[54px] leading-[1.05] text-[#520000] uppercase md:text-[clamp(32px,4.4vw,64px)]">{contactHeading}</h1>
         <div className="flex flex-col items-start gap-3">
-          {contactLinks.map((link, index) => <SocialAnchor key={`${link.label}-${index}`} link={link} showLabel />)}
+          {contactLinks.map((link, index) => <SocialAnchor key={`${link.label}-${index}`} link={link} label={link.href.replace(/^mailto:/i, "") || link.label} showLabel />)}
         </div>
       </section>
     </main>
